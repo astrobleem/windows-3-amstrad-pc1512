@@ -12,7 +12,7 @@ Ready-built driver, installation instructions, checksums and component notices. 
 
 ![Windows 3.0 Program Manager over a 16-color test wallpaper, Amstrad PC1512 emulated in 86Box](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/ba980d4ccf9092c38ea22b006373f420d0f059e2/docs/pc1512/P86_11.PNG)
 
-*86Box emulator capture: Windows 3.0 Program Manager with a 16-color test wallpaper. Original image from the shared driver's [PC1512 evidence](https://github.com/astrobleem/oemdisplay-tandy/tree/ba980d4ccf9092c38ea22b006373f420d0f059e2/docs/pc1512).*
+*86Box 6.0, emulated Amstrad PC1512 built-in planar video: Windows 3.0 Program Manager in 640×200×16. See the [88/88 test record](https://github.com/astrobleem/oemdisplay-tandy/blob/ba980d4ccf9092c38ea22b006373f420d0f059e2/docs/pc1512/P86CHK.JSN) and [tested evidence commit ba980d4](https://github.com/astrobleem/oemdisplay-tandy/commit/ba980d4ccf9092c38ea22b006373f420d0f059e2). Emulator evidence only; physical PC1512 hardware remains unqualified. One cursor-state case required recovery and retry, as described below.*
 
 ### Prerequisites
 
