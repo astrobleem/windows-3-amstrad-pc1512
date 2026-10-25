@@ -1,52 +1,34 @@
 # Windows 3.0 on Amstrad PC1512
 
-**640x200, 16 colors. [Download PC1512.ZIP](https://github.com/astrobleem/oemdisplay-tandy/releases/download/experimental-displays-2026-10-12/PC1512.ZIP)**
+**640x200, 16 colors. [Download P15SET.EXE](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/PC1512/P15SET.EXE)**
 
-For Amstrad PC1512 built-in video, 8086 and 640 KB. **Not PC1640 or ordinary CGA.**
-Use an existing Windows 3.0 real-mode installation. The driver is ready built;
-there is no automatic installer or fresh Windows Setup integration.
+For PC1512 built-in video, an 8086, 640 KB, DOS 3.20+ and an installed Windows
+3.0 in real mode. Not PC1640 or ordinary CGA. The packet includes the driver,
+matching original fonts, grabber and startup artwork.
 
 ## Install
 
-1. Extract the ZIP to `C:\P15EXP` and exit Windows completely to DOS.
-2. Copy the driver:
+1. Put P15SET.EXE on the PC1512, exit Windows to DOS and run `P15SET`.
+2. Run `C:\P15EXP\INSTALL`.
+3. In Windows Setup choose Display, Other, `C:\P15EXP`, then
+   **Amstrad PC1512 640x200 16 colors**. Complete Setup and return to DOS.
+4. Start Windows with `C:\P15EXP\P15WIN`.
 
-   ```bat
-   COPY C:\P15EXP\PC1512.DRV C:\WINDOWS\SYSTEM\PC1512.DRV
-   ```
+For Windows outside `C:\WINDOWS`, pass its drive and directory to both entries,
+for example `INSTALL D: \WIN30` and `P15WIN D: \WIN30`.
+Dedicated video RAM needs no reservation helper.
 
-3. In `C:\WINDOWS\SYSTEM.INI`, set the `display.drv` line under `[boot]` to
-   `display.drv=PC1512.DRV`. Keep the other settings, fonts and grabber.
-4. Start Windows:
+Prefer a ZIP? [Download PC1512.ZIP](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/PC1512/PC1512.ZIP), extract all its
+files to `C:\P15EXP`, then follow step 2. Windows Setup installs the display;
+no manual SYSTEM.INI editing or separate support files are needed.
 
-   ```bat
-   C:
-   CD \WINDOWS
-   WIN /R
-   ```
+Native Setup and 640x200 startup passed on an emulated PC1512. Physical hardware,
+the Amstrad mouse port and DOS-box switching remain unqualified. Windows 3.1
+is not supported.
 
-Use your actual Windows directory if different. Dedicated video RAM needs no
-RESERVE/JRGUARD step. Use ordinary Windows startup; the Tandy WINXT launcher
-and palette animation are for other hardware. This packet keeps your existing
-WIN.COM and its startup logo behavior.
+![Windows 3.0 on emulated PC1512](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/docs/pc1512/P86_11.PNG)
 
-## Known limits
-
-The driver passed 88/88 final Windows checks in 86Box. The recorded runs used
-an existing AT/EGA installation with EGA fonts/grabber and emulated serial input.
-One cursor-state case needed a retry; its cause is unresolved. Physical PC1512,
-the native mouse port, fresh Windows Setup and DOS-box switching are unqualified.
-Windows 3.1 is not supported.
-
-![Windows 3.0 in the Amstrad PC1512 emulator](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/docs/pc1512/P86_11.PNG)
-
-## Change back or get help
-
-From plain DOS, use Windows Setup to restore your previous display, or restore
-the previous `display.drv` value. The copied driver is inactive afterward.
-
-[Detailed guide](https://github.com/astrobleem/oemdisplay-tandy/blob/main/experiments/DISPLAY3/PC1512.TXT) ·
-[Technical details](https://github.com/astrobleem/oemdisplay-tandy/blob/main/docs/PC1512.MD) ·
+[Packaged instructions](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/PC1512/INSTALL.TXT) |
+[Technical details](https://github.com/astrobleem/oemdisplay-tandy/blob/main/docs/PC1512.MD) |
 [Report a problem](https://github.com/astrobleem/oemdisplay-tandy/issues).
-Component notices are included in the download.
-This repository is the front door; implementation lives in [oemdisplay-tandy](https://github.com/astrobleem/oemdisplay-tandy).
+Implementation lives in [oemdisplay-tandy](https://github.com/astrobleem/oemdisplay-tandy).
